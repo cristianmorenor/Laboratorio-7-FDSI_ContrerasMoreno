@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+# Node / Promptfoo
+node_modules/
+.promptfoo/
+*.log
+# Secretos (no hay ninguno en este proyecto, pero por si acaso)
+.env
+.env.*

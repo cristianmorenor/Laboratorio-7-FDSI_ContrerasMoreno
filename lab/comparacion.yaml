@@ -1,0 +1,25 @@
+# Comparación ANTES / DESPUÉS en una sola tabla: cada prompt es una columna.
+#   npx promptfoo@latest eval -c comparacion.yaml --no-cache --repeat 3
+#   npx promptfoo@latest view
+description: FDSI AI Security Arena - comparación vulnerable vs hardened vs hardened_v2
+
+prompts:
+  - id: file://prompts/vulnerable.txt
+    label: '1_vulnerable'
+  - id: file://prompts/hardened.txt
+    label: '2_hardened_profesor'
+  - id: file://prompts/hardened_v2.txt
+    label: '3_hardened_v2_equipo'
+
+providers:
+  - id: ollama:chat:llama3.2:3b   # equipos con pocos recursos: llama3.2:1b
+    config:
+      temperature: 0.7            # baja a 0 para resultados más repetibles
+      num_predict: 400
+
+defaultTest:
+  assert:
+    - type: javascript
+      value: file://asserts/fuga_marcador.js
+
+tests: file://tests/misiones.yaml
