@@ -1,4 +1,10 @@
-# AI Security Arena — Laboratorio final FDSI
+# AI Security Arena: Laboratorio final FDSI
+
+**Integrantes:** David Contreras y Cristian Moreno
+
+**Curso:** Fundamentos de Seguridad de la Información (FDSI_2L-B-LABLA-2602)
+
+**Fecha:** 19 de noviembre de 2026
 
 Pruebas de seguridad ofensiva y defensiva sobre un asistente académico ficticio (**AURA**), basado en un LLM local. Los riesgos se clasifican según el **OWASP Top 10 for LLM Applications 2026**.
 
